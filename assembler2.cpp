@@ -64,6 +64,8 @@ int main()
         istringstream iss(readString); // treat string as an input stream
 
         string command, operand1, operand2, operand3;
+        bitset<6> temp0;
+        bitset<5> temp1, temp2, temp3;
         if (getline(iss, command, ' ') && getline(iss, operand1, ' ') && getline(iss, operand2, ' ') && getline(iss, operand3))
         {
             // do something
@@ -71,7 +73,7 @@ int main()
             {
             	if(command == arrayOp[i].opcodeStr)
               {
-                cout << "Command: "<< arrayOp[i].opcodeInt <<endl;
+                temp0 = arrayOp[i].opcodeInt;
 							}
               
               
@@ -80,7 +82,7 @@ int main()
             {
             	if(operand1 == arrayReg[l].registers)
               {
-                cout << "Operator1: "<< arrayReg[l].regAddress<<endl;
+                 temp1 = arrayReg[l].regAddress;
 							}
             }
           
@@ -89,7 +91,7 @@ int main()
             {
             	if(operand2 == arrayReg[r].registers)
               {
-                cout << "Operator2: "<< arrayReg[r].regAddress<<endl;
+                temp2= arrayReg[r].regAddress;
 							}
             }
           
@@ -98,9 +100,12 @@ int main()
             {
             	if(operand3 == arrayReg[t].registers)
               {
-                cout << "Operator3: "<< arrayReg[t].regAddress<<endl;
+                temp3 = arrayReg[t].regAddress;
 							}
             }
+
+            cout << " opcode "<<  " rs \t" << " rt "<<"\trd "<<endl;
+            cout << temp0 << " | "<< temp1 << " | "<<temp2 << " | "<<temp3 <<endl;
           	
 
            // std::cout << "Command: " << command << ", Operand1: " << operand1 << ", Operand2: " << operand2 << ", Operand3: " << operand3 << std::endl;
