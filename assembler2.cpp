@@ -4,7 +4,12 @@
 #include<string>
 #include<bitset>
   
+/*
+    Here is a sample mips instruction: add $t0, $s1, $s2
+    there is a blankspace between add and $t0
+    and (;) as a delimeter between operands
 
+*/
 
 using namespace std;
 struct OPCODE
