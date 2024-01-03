@@ -113,7 +113,7 @@ int main()
             cout << temp0 << " | "<< temp1 << " | "<<temp2 << " | "<<temp3 <<endl;
           	
 
-           // std::cout << "Command: " << command << ", Operand1: " << operand1 << ", Operand2: " << operand2 << ", Operand3: " << operand3 << std::endl;
+         
         }
         else
         {
